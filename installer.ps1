@@ -13,11 +13,15 @@ function Get-RandomString {
 }
 
 # variables :   
-$wrdir = Get-RandomString -length 25
 $initial_path =  Get-Location
 $temp_folder = $env:TEMP
 $newFolderPath = Join-Path -Path $temp_folder -ChildPath $wrdir
 $removedItemPath = Join-Path -Path $initial_path -ChildPath "installer.ps1"
+
+do {
+    $wrdir = Get-RandomString -length 25
+    $newFolderPath = Join-Path -Path $temp_folder -ChildPath $wrdir
+} until (-not (Test-Path $newFolderPath))
 
 New-Item -Path $newFolderPath -ItemType Directory
 

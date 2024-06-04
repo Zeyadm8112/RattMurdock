@@ -38,8 +38,6 @@ REM Run the downloaded installer.ps1 script using PowerShell
 powershell -NoProfile -WindowStyle Hidden -File "installer.ps1"
 
 
-start
-
 @REM del installer.ps1
 del wget.cmd
 

