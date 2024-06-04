@@ -17,10 +17,13 @@ $wrdir = Get-RandomString -length 25
 $initial_path =  Get-Location
 $temp_folder = $env:TEMP
 $newFolderPath = Join-Path -Path $temp_folder -ChildPath $wrdir
+$removedItemPath = Join-Path -Path $initial_path -ChildPath "installer.ps1"
 
 New-Item -Path $newFolderPath -ItemType Directory
 
 Write-Output "New folder created: $newFolderPath"
+
+Remove-Item -Path $removedItemPath -Force
 
 
 

