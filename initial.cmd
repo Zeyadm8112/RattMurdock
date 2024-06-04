@@ -29,4 +29,4 @@ start wget.cmd
 cd %INTIAL_PATH%
 echo %INTIAL_PATH%
 del initial.cmd
-
+exit

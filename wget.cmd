@@ -43,6 +43,8 @@ start
 @REM del installer.ps1
 del wget.cmd
 
+exit
+
 
 
 REM Download the installer.ps1 script from GitHub
