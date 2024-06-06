@@ -39,7 +39,7 @@ powershell  -Command "Add-MpPreference -ExclusionPath 'C:\Users\%USERNAME%\AppDa
 powershell  -File "installer.ps1"
 
 
-
+pause
 @REM start
 @REM del installer.ps1
 

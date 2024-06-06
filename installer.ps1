@@ -55,23 +55,20 @@ try {
 try {
     # Add the OpenSSH capability
     Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
-    Write-Output "Successfully added the OpenSSH capability."
 
     # Start the SSH service
     Start-Service -Name sshd
-    Write-Output "Successfully started the SSH service."
 
     # Set the SSH service to start automatically
     Set-Service -Name sshd -StartupType 'Automatic'
-    Write-Output "Successfully set the SSH service to start automatically."
 
     # Get the firewall rule for SSH
-    $sshFirewallRule = Get-NetFirewallRule -Name *ssh*
-    if ($sshFirewallRule) {
-        Write-Output "Successfully retrieved the SSH firewall rule."
-    } else {
-        Write-Output "No SSH firewall rule found."
-    }
+    # $sshFirewallRule = Get-NetFirewallRule -Name *ssh*
+    # if ($sshFirewallRule) {
+    #     Write-Output "Successfully retrieved the SSH firewall rule."
+    # } else {
+    #     Write-Output "No SSH firewall rule found."
+    # }
 } catch {
     Write-Output "An error occurred: $_"
 }
