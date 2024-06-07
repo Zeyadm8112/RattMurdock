@@ -7,13 +7,16 @@ import os
 import sys
 import random
 import getpass
-
+from paramiko import SSHClient
 # ** Variables : 
 
 help_menu = """
 Arguments : 
-    - t <ipadress> = run RattMurdock on target ip address
-    - f <config file> = run RattMurdock by config file
+            XXX.ratt = RattMurdock target's device configuration file
+
+Example    :
+            python3 main.py example.ratt
+
 """
 qoutes = [
     "There are other ways to see.",
@@ -50,7 +53,7 @@ username = getpass.getuser()
 header = f"{username}@RattMurdock"
 
 options_menu ="""
-    [*] Select A Number To Use Payload [8]
+    [*] Select A Number To Use Payload [*]
 
         Payloads :
 
@@ -72,13 +75,40 @@ def read_config(config_file):
     configuration["wordDirectory"] =  read_lines[3].strip()
     return configuration
 
+def exit():
+    sys.exit()
+
 def cli(arguments):
     if arguments:
-        print(read_config("config.ratt"))
-        print("Options : ")
-        print(options_menu)
+        # print("Options : ")
 
-        option = input(f"{header} $ ") 
+
+        try:
+            configuration = read_config(sys.argv[1])
+
+        except FileNotFoundError:
+            print("[!] File does not exist")
+
+            exit()
+
+        print(options_menu)
+        config_file = input(f"{header} $ ") 
+
+        ipv4 = configuration.get("ipAddress")
+        password= configuration.get("password")
+        username = configuration.get("userName")
+
+        if config_file == "0":  
+            connect(password,username,ipv4)
+
+
+
+        ipv4 = configuration.get("ipAddress")
+        password= configuration.get("password")
+        username = configuration.get("userName")
+
+        if config_file == "0":  
+            connect(password,username,ipv4)
 
     else:
         print(help_menu)
@@ -91,11 +121,9 @@ def os_detection():
         return "l"
 
 # connect to target
-# ! STILL WORKING ON
-def connect(argument):
-    if sys.argv[1] == "-t":
-        ipv4 = sys.argv[2]
-    if sys.argv[1] == "-f":
+def connect(password,username,ipv4):
+    command = f"sshpass -p {password} ssh {username}@{ipv4} 'powershell'"
+    os.system(command)
         
 
 
