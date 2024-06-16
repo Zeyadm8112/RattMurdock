@@ -66,12 +66,13 @@ This tool is intended solely for educational and ethical hacking purposes. Unaut
 ## Video Demonstration
 
 
-https://github.com/Zeyadm8112/RattMurdock/assets/98295685/65473305-5b59-4e1e-9bd1-72ad73630aad
+https://github.com/Zeyadm8112/RattMurdock/assets/98295685/c5e992f1-c945-46fa-b2f9-15e1a0c47ac8
+
 
 
 ## Installation
 ### Prerequisites
-- Python 3.x
+- Python 3
 - `pip` (Python package installer)
 - Required Python packages (specified in `requirements.txt`)
 - SSHPASS
