@@ -1,20 +1,21 @@
-# MATTMURDOCK
-## Eductional RAT 
-## CREATED BY : NINJACAT811
+# MATTMURDOCK 
+### CREATED BY : NINJACAT811
 
- ######     #    ####### ####### #     # #     # ######  ######  #######  #####  #    # 
- #     #   # #      #       #    ##   ## #     # #     # #     # #     # #     # #   #  
- #     #  #   #     #       #    # # # # #     # #     # #     # #     # #       #  #   
- ######  #     #    #       #    #  #  # #     # ######  #     # #     # #       ###    
- #   #   #######    #       #    #     # #     # #   #   #     # #     # #       #  #   
- #    #  #     #    #       #    #     # #     # #    #  #     # #     # #     # #   #  
- #     # #     #    #       #    #     #  #####  #     # ######  #######  #####  #    # 
-                                                                                        
-
-     
+ '''
+ ██▀███   ▄▄▄      ▄▄▄█████▓▄▄▄█████▓ ███▄ ▄███▓ █    ██  ██▀███  ▓█████▄  ▒█████   ▄████▄   ██ ▄█▀
+▓██ ▒ ██▒▒████▄    ▓  ██▒ ▓▒▓  ██▒ ▓▒▓██▒▀█▀ ██▒ ██  ▓██▒▓██ ▒ ██▒▒██▀ ██▌▒██▒  ██▒▒██▀ ▀█   ██▄█▒ 
+▓██ ░▄█ ▒▒██  ▀█▄  ▒ ▓██░ ▒░▒ ▓██░ ▒░▓██    ▓██░▓██  ▒██░▓██ ░▄█ ▒░██   █▌▒██░  ██▒▒▓█    ▄ ▓███▄░ 
+▒██▀▀█▄  ░██▄▄▄▄██ ░ ▓██▓ ░ ░ ▓██▓ ░ ▒██    ▒██ ▓▓█  ░██░▒██▀▀█▄  ░▓█▄   ▌▒██   ██░▒▓▓▄ ▄██▒▓██ █▄ 
+░██▓ ▒██▒ ▓█   ▓██▒  ▒██▒ ░   ▒██▒ ░ ▒██▒   ░██▒▒▒█████▓ ░██▓ ▒██▒░▒████▓ ░ ████▓▒░▒ ▓███▀ ░▒██▒ █▄
+░ ▒▓ ░▒▓░ ▒▒   ▓▒█░  ▒ ░░     ▒ ░░   ░ ▒░   ░  ░░▒▓▒ ▒ ▒ ░ ▒▓ ░▒▓░ ▒▒▓  ▒ ░ ▒░▒░▒░ ░ ░▒ ▒  ░▒ ▒▒ ▓▒
+  ░▒ ░ ▒░  ▒   ▒▒ ░    ░        ░    ░  ░      ░░░▒░ ░ ░   ░▒ ░ ▒░ ░ ▒  ▒   ░ ▒ ▒░   ░  ▒   ░ ░▒ ▒░
+  ░░   ░   ░   ▒     ░        ░      ░      ░    ░░░ ░ ░   ░░   ░  ░ ░  ░ ░ ░ ░ ▒  ░        ░ ░░ ░ 
+   ░           ░  ░                         ░      ░        ░        ░        ░ ░  ░ ░      ░  ░   
+                                                                   ░               ░               
 [.] There are other ways to see.
-
 [.] Created by :  NinjaCat811
+
+'''
 
 
 ## Overview
@@ -56,6 +57,7 @@ This tool is intended solely for educational and ethical hacking purposes. Unaut
 [CURRENTLY]
 - **Remote Desktop:** View and control the remote desktop.
 - **File Management:** Upload, download, and manage files on the target machine.
+
 [SOON]
 - **Keylogging:** Capture keystrokes from the target machine.
 - **Ransomeware** Decrypt all the target's files
@@ -72,7 +74,7 @@ This tool is intended solely for educational and ethical hacking purposes. Unaut
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/Zeyadm8112/RattMurdock.git
-    cd educational-rat
+    cd RattMurdock
     ```
 
 5. **Run the client on the target machine:**
