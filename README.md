@@ -63,6 +63,12 @@ This tool is intended solely for educational and ethical hacking purposes. Unaut
 - **Ransomeware** Decrypt all the target's files
 - **Botnet** View and manage running processes.
 
+  ## Video Demonstration
+
+<a href="https://www.youtube.com/watch?v=TUu6Ff1IdC4" target="_blank">
+  <img src="https://img.youtube.com/vi/example/0.jpg" alt="Watch the video" style="width:100%;">
+</a>
+
 ## Installation
 ### Prerequisites
 - Python 3.x
