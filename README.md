@@ -20,7 +20,7 @@
 
 ## Overview
 
-RATTMURDOCK is a Remote Access Trojan (RAT) inspired by the legendary show *Daredevil*. This tool is designed for educational purposes and allows users to create a hidden local administrator account on a target Windows machine. It establishes a persistent SSH connection that runs at startup, providing the user with a Python console for remote interaction.
+RATTMURDOCK is a Remote Access Trojan (RAT), The name is inspired by the legendary show *Daredevil*. This tool is designed for educational purposes and allows users to create a hidden local administrator account on a target Windows machine. It establishes a persistent SSH connection that runs at startup, providing the user with a Python console for remote interaction.
 
 ## Development Status
 
