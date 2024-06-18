@@ -61,7 +61,9 @@ This tool is intended solely for educational and ethical hacking purposes. Unaut
 [SOON]
 - **Keylogging:** Capture keystrokes from the target machine.
 - **Ransomeware** Decrypt all the target's files
-- **Botnet** View and manage running processes.
+- **Screen Capture** taking screenshots and screen videos
+- **Media Capture** recording audio and opens the webcam
+- **Botnet** Turn the target PC into part of a botnet, allowing remote control and management of running processes.
 
 ## Video Demonstration
 
