@@ -35,7 +35,9 @@ RATTMURDOCK will be available in two versions:
    - Encryption
    - Virtual Machine (VM) detection
    - Antivirus bypass mechanisms
-   - Obfuscation 
+   - Obfuscation
+   - Ransomware
+     
 The goal of having two versions is to reduce the risk of this malware being misused.
 
 ## Features (Public Version)
